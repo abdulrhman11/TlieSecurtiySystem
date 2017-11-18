@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="saud.abdulrhman.tliesecurtiysystem.loginActivity">
+
+    <RelativeLayout
+        android:layout_width="397dp"
+        android:layout_height="524dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:layout_marginLeft="73dp"
+            android:layout_marginStart="73dp"
+            android:layout_marginTop="49dp"
+            android:ems="10"
+            android:hint="user name"
+            android:inputType="none|textPersonName" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/etUsername"
+            android:layout_alignStart="@+id/etUsername"
+            android:layout_below="@+id/etUsername"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="password"
+            android:inputType="none|textPassword"
+            android:singleLine="false" />
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/etPassword"
+            android:layout_alignStart="@+id/etPassword"
+            android:layout_below="@+id/etPassword"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/colorAccent"
+            android:text="login" />
+
+        <TextView
+            android:id="@+id/TVRegisterHere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btLogin"
+            android:layout_alignRight="@+id/btLogin"
+            android:layout_below="@+id/btLogin"
+            android:layout_marginTop="38dp"
+            android:text="Register Here" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/etUsername"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/etUsername"
+            android:layout_marginTop="67dp"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="14sp"
+            android:text="#TileSecurity"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
