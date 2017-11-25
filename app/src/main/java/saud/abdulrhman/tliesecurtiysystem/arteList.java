@@ -1,28 +1,56 @@
 package saud.abdulrhman.tliesecurtiysystem;
 
-import java.sql.Time;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 /**
  * Created by PCD on 11/16/2017.
  */
 
-public class arteList {
+public class arteList implements Parcelable {
 
-    private static String alert;
-    private  static String time;
+    private String alert;
+    private String time;
 
     public arteList(String head, String time) {
         this.alert = head;
         this.time = time;
     }
 
-    public arteList(){}
 
-    public static String getHead() {
+    protected arteList(Parcel in) {
+        alert = in.readString();
+        time = in.readString();
+    }
+
+    public static final Creator<arteList> CREATOR = new Creator<arteList>() {
+        @Override
+        public arteList createFromParcel(Parcel in) {
+            return new arteList(in);
+        }
+
+        @Override
+        public arteList[] newArray(int size) {
+            return new arteList[size];
+        }
+    };
+
+    public String getHead() {
         return alert;
     }
 
-    public static String getTime() {
+    public String getTime() {
         return time;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(alert);
+        dest.writeString(time);
     }
 }

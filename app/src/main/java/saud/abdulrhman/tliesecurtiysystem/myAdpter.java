@@ -1,6 +1,5 @@
 package saud.abdulrhman.tliesecurtiysystem;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,11 +16,10 @@ public class myAdpter extends RecyclerView.Adapter<myAdpter.ViewHolder> {
 
 
     private List<arteList> AlrteList;
-    private Context context;
 
-    public myAdpter(List<arteList> AlrteList, Context context) {
+
+    public myAdpter(List<arteList> AlrteList) {
         this.AlrteList = AlrteList;
-        this.context = context;
     }
 
     @Override
@@ -35,9 +33,8 @@ public class myAdpter extends RecyclerView.Adapter<myAdpter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         arteList alrte = AlrteList.get(position);
-
-        holder.textViewhead.setText(arteList.getHead());
-        holder.TextViewtime.setText(arteList.getTime());
+        holder.textViewhead.setText(alrte.getHead());
+        holder.TextViewtime.setText(alrte.getTime());
     }
 
     @Override
@@ -53,7 +50,6 @@ public class myAdpter extends RecyclerView.Adapter<myAdpter.ViewHolder> {
 
         public ViewHolder(View itemView) {
             super(itemView);
-
             textViewhead = (TextView)  itemView.findViewById(R.id.textViewhead);
             TextViewtime = (TextView)  itemView.findViewById(R.id.TextViewtime);
 
